@@ -19,26 +19,15 @@ jobs:
     name: A job to say hello
     steps:
       - name: Hello world action step
-        id: hello
+        id: sildeswj
         uses: sildeswj/github-to-slack@latest
         with:
-          who-to-greet: "Mona the Octocat"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          slack-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          github-run-id: ${{ github.run_id }}
       # Use the output from the `hello` step
       - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
-# jobs:
-#   github_to_slack:
-#     runs-on: ubuntu-latest
-#     name: A job to say hello
-#     steps:
-#       - name: Test
-#       - uses: sildeswj/github-to-slack@latest
-#       - id: foo
-#         with:
-#           who-to-greet: "Mona the Octocat"
-#       - run: echo random-number ${{ steps.foo.outputs.random-number }}
-#         shell: bash
-
+        run: echo "The time was ${{ steps.sildeswj.outputs.time }}"
 # jobs:
 #   mention-to-slack:
 #     runs-on: ubuntu-latest
