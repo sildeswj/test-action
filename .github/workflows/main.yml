@@ -25,7 +25,8 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           slack-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
           github-run-id: ${{ github.run_id }}
-          user-data2: ${{ secrets.USER_DATA2 }}
+          user-data2: [{ sildeswj: "U0172A51T4N", test: "SERWERWERWE" }]
+          # user-data2: ${{ secrets.USER_DATA2 }}
       # Use the output from the `hello` step
       - name: Get the output result
         run: echo "The result is ${{ steps.sildeswj.outputs.result }}"
