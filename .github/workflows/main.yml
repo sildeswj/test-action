@@ -19,7 +19,7 @@ jobs:
     name: A job to say hello
     steps:
       - name: Hello world action step
-        id: sildeswj
+        id: hello
         uses: sildeswj/github-to-slack@latest
         with:
           who-to-greet: "Mona the Octocat"
