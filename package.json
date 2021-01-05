@@ -1,0 +1,21 @@
+{
+  "name": "test-action",
+  "version": "1.0.0",
+  "description": "This is a test repo for github action",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "yarn start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sildeswj/test-action.git"
+  },
+  "author": "Jay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sildeswj/test-action/issues"
+  },
+  "homepage": "https://github.com/sildeswj/test-action#readme"
+}
