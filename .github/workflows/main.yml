@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: sildeswj
-        uses: sildeswj/github-to-slack@latest
+        uses: sildeswj/github-to-slack@v0.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           slack-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
