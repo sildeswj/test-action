@@ -13,19 +13,19 @@ on:
   pull_request_review_comment:
     types: [created, edited]
 
-  jobs:
-    github_to_slack:
-      runs-on: ubuntu-latest
-      name: A job to say hello
-      steps:
-        - name: Hello world action step
-          id: sildeswj
-          uses: sildeswj/github-to-slack@latest
-          with:
-            who-to-greet: "Mona the Octocat"
-        # Use the output from the `hello` step
-        - name: Get the output time
-          run: echo "The time was ${{ steps.hello.outputs.time }}"
+jobs:
+  github_to_slack:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: Hello world action step
+        id: sildeswj
+        uses: sildeswj/github-to-slack@latest
+        with:
+          who-to-greet: "Mona the Octocat"
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
 # jobs:
 #   github_to_slack:
 #     runs-on: ubuntu-latest
