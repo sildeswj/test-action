@@ -26,8 +26,8 @@ jobs:
           slack-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
           github-run-id: ${{ github.run_id }}
       # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.sildeswj.outputs.time }}"
+      - name: Get the output result
+        run: echo "The result is ${{ steps.sildeswj.outputs.result }}"
 # jobs:
 #   mention-to-slack:
 #     runs-on: ubuntu-latest
